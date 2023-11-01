@@ -28,6 +28,7 @@ public class Enemigo : MonoBehaviour
                 // Mover al enemigo hacia el objetivoNodo
                 MoverHaciaNodo(objetivoNodo);
                 energiaActual = energiaActual - objetivoNodo.PesoDelArco;
+                Debug.Log(energiaActual);
                 // Si el enemigo llega al objetivoNodo, busca el siguiente nodo
                 if (Vector2.Distance(transform.position, objetivoNodo.transform.position) < 0.1f)
                 {

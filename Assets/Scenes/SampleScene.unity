@@ -875,7 +875,7 @@ MonoBehaviour:
   energiaMaxima: 100
   energiaActual: 0
   tiempoDescanso: 5
-  objetivoNodo: {fileID: 1353825186}
+  objetivoNodo: {fileID: 731744863}
   movimientoTiempo: 0.5
 --- !u!50 &1612400358
 Rigidbody2D:
