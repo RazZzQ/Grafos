@@ -207,7 +207,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 389616789}
-  - component: {fileID: 389616788}
   m_Layer: 0
   m_Name: Grafo
   m_TagString: Untagged
@@ -215,18 +214,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &389616788
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 389616787}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8229934b3473f6944bcfb691f9ecad53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &389616789
 Transform:
   m_ObjectHideFlags: 0
@@ -874,8 +861,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   energiaMaxima: 100
   energiaActual: 0
-  tiempoDescanso: 5
-  objetivoNodo: {fileID: 731744863}
+  tiempoDescanso: 2
+  objetivoNodo: {fileID: 1353825186}
   movimientoTiempo: 0.5
 --- !u!50 &1612400358
 Rigidbody2D:
