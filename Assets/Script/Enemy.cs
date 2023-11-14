@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemigo : MonoBehaviour
@@ -50,11 +51,25 @@ public class Enemigo : MonoBehaviour
         }
     }
 
+    private int CompararDistancias(Nodos a, Nodos b)
+    {
+        float distanciaA = Vector2.Distance(transform.position, a.transform.position);
+        float distanciaB = Vector2.Distance(transform.position, b.transform.position);
+        return distanciaA.CompareTo(distanciaB);
+    }
+
     private Nodos GetNextNode()
     {
-        int index = Random.Range(0, objetivoNodo.ListaNodosVecinos.Count);
-        return objetivoNodo.ListaNodosVecinos[index];
+        // Lista temporal para almacenar los nodos ordenados por distancia
+        List<Nodos> nodosOrdenados = new List<Nodos>(objetivoNodo.ListaNodosVecinos);
+
+        // Ordenar la lista de nodos utilizando el método CompararDistancias como comparador
+        nodosOrdenados.Sort(CompararDistancias);
+
+        // Devolver el nodo más cercano
+        return nodosOrdenados[0];
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Nodo")
