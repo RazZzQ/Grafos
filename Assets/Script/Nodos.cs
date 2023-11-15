@@ -1,13 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
+using System.Collections.Specialized;
 using UnityEngine;
 
 public class Nodos : MonoBehaviour
 {
-    public List<Nodos> ListaNodosVecinos;
-    public float PesoDelArco;
-
+    public Nodos[] NodeControl;
+    public int Factordepeso; 
     // Start is called before the first frame update
     void Start()
     {
@@ -19,9 +18,9 @@ public class Nodos : MonoBehaviour
     {
         
     }
-    public Nodos GetNextNode()
+    public Nodos getNextNode()
     {
-        int index = Random.Range(0, ListaNodosVecinos.Count);
-        return ListaNodosVecinos[index];
+        int index = Random.Range(0, NodeControl.Length);
+        return NodeControl[index];
     }
 }
